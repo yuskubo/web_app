@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %>
+
+<p>
+  <strong>id</strong>
+  <%= @post.id %>
+</p>
+
+<p>
+  <strong>投稿内容</strong>
+  <%= @post.content %>
+</p>
+
+<p>
+  <strong>作成日</strong>
+  <%= @post.created_at %>
+</p>
+
+<p>
+  <strong>更新日</strong>
+  <%= @post.updated_at %>
+</p>
+
+<%= link_to 'TOPへ', posts_path %>
