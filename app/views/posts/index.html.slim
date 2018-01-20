@@ -1,0 +1,33 @@
+p#notice
+  = notice
+h1
+  | 投稿内容
+table
+  thead
+    tr
+      th
+        | id
+      th
+        | 内容
+      th
+        | 作成日
+      th
+        | 更新日
+  tbody
+    - @posts.each do |post|
+      tr
+        td
+          = post.id
+        td
+          = post.content
+        td
+          = post.created_at
+        td
+          = post.updated_at
+        td
+          = link_to '詳細', post
+        td
+          = link_to '編集', edit_post_path(post)
+        td
+          = link_to '削除', post, method: :delete, data: {confirm: '削除してよろしいですか。'}
+= link_to '新規登録', new_post_path

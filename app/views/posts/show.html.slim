@@ -1,0 +1,19 @@
+p#notice
+  = notice
+  p
+    strong
+      | id
+    = @post.id
+  p
+    strong
+      | 投稿内容
+    = @post.content
+  p
+    strong
+      | 作成日
+    = @post.created_at
+  p
+    strong
+      | 更新日
+    = @post.updated_at
+  = link_to 'TOPへ', posts_path
