@@ -4,13 +4,58 @@
 .copy-container h1 {
   font-size: 140px;
 }
-
-/* copy-containerの中のh2のfont-sizeを指定してください */
 .copy-container h2 {
   font-size: 60px;
 }
-
-/* copy-containerの中のspanの色を指定してください */
 .copy-container span {
   color: #ff4a4a;
+}
+
+.contents {
+  height: 350px;
+  margin-top: 100px;
+}
+.section-title {
+  border-bottom: 2px solid #dee7ec;
+  font-size: 28px;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+}
+.contents-item {
+  float: left;
+  margin-right: 40px;
+}
+.detail {
+  display: none;
+}
+#ror-button {
+  width: 205px;
+  height: 190px;
+  background-image: image-url("ror.png");
+  background-size: auto;
+  cursor: pointer;
+  border: none;
+}
+#css-button {
+  width: 205px;
+  height: 190px;
+  background-image: image-url("css.png");
+  background-size: auto;
+  cursor: pointer;
+  border: none;
+}
+#javascript-button {
+  width: 205px;
+  height: 190px;
+  background-image: image-url("javascript.png");
+  background-size: auto;
+  cursor: pointer;
+  border: none;
+}
+#text-button {
+  display: block;
+  cursor: pointer;
+  width: 160px;
+  text-align: center;
+  border: 1px solid #232323;
 }
