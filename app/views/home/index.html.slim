@@ -2,15 +2,18 @@ title ホーム
   = stylesheet_link_tag "common", media: "all"
   = stylesheet_link_tag "home", media: "all"
 
+
 div.header
   div.header-logo
-    | フロントエンド学習
+    | プログラミング学習サイト
   div.header-list
     ul
       li
-        | css学習
+        | Ruby On Rails
       li
-        | javascript学習
+        | css
+      li
+        | javascript
       li
         | お問い合わせ
 
@@ -21,14 +24,28 @@ div.main
       span
         | .
     h2
-      | プログラミングの世界へようこそ
+      | プログラミング
 
   div.contents
-    h3
-      | 学べるレッスン
-      
+    h3.section-title
+      | 学習項目
+    div.contents-item
+      button#ror-button
+    div.contents-item
+      button#css-button
+    div.contents-item
+      button#javascript-button
+  div#ror-text.detail
+    | Ruby on RailsはオープンソースのWebアプリケーションフレームワークです。
+  div#css-text.detail
+    | cssはHTMLやXMLの要素をどのように修飾するかを指示する言語です。
+  div#ror-text.detail
+    | JavaScriptとはWebアプリケーションのクライアントサイドで実行され、インタラクティブな表現を実現できるプログラム言語です。
+
+  script type="text/javascript" src='assets/home.js'
 
   div.contact-form
+  = render 'contact_form'
 
 div.footer
   div.footer-logo
