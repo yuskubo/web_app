@@ -1,7 +1,11 @@
-title ホーム
-  = stylesheet_link_tag "common", media: "all"
-  = stylesheet_link_tag "home", media: "all"
+/ title ホーム
+- provide(:title, 'ホーム')
 
+- content_for :stylesheet_links do
+  = stylesheet_link_tag "home", media: 'all'
+
+- content_for :javascript_includes do
+  = javascript_include_tag 'home.js'
 
 div.header
   div.header-logo
@@ -20,7 +24,7 @@ div.header
 div.main
   div.copy-container
     h1
-      | HELLO WORLD
+      | Hello World
       span
         | .
     h2
@@ -29,27 +33,27 @@ div.main
   div.contents
     h3.section-title
       | 学習項目
+    div
+     | 以下の画像をクリックをすると説明を見ることができます。
     div.contents-item
-      button#ror-button
+      button#ror-btn.btn-icon onclick="ror_btn()"
     div.contents-item
-      button#css-button
+      button#css-btn.btn-icon onclick="css_btn()"
     div.contents-item
-      button#javascript-button
-  div#ror-text.detail
+      button#jav-btn.btn-icon onclick="jav_btn()"
+  div#ror-text.detail-area
     | Ruby on RailsはオープンソースのWebアプリケーションフレームワークです。
-  div#css-text.detail
+  div#css-text.detail-area
     | cssはHTMLやXMLの要素をどのように修飾するかを指示する言語です。
-  div#ror-text.detail
+  div#jav-text.detail-area
     | JavaScriptとはWebアプリケーションのクライアントサイドで実行され、インタラクティブな表現を実現できるプログラム言語です。
-
-  script type="text/javascript" src='assets/home.js'
 
   div.contact-form
   = render 'contact_form'
 
 div.footer
   div.footer-logo
-    | フロントエンド学習
+    | プログラミング学習サイト
   div.footer-list
     ul
       li

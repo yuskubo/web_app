@@ -25,37 +25,24 @@
   float: left;
   margin-right: 40px;
 }
-.detail {
+.detail-area {
   display: none;
 }
-#ror-button {
-  width: 205px;
-  height: 190px;
-  background-image: image-url("ror.png");
-  background-size: auto;
-  cursor: pointer;
+.btn-icon {
+  width: 200px;
+  height: 200px;
   border: none;
-}
-#css-button {
-  width: 205px;
-  height: 190px;
-  background-image: image-url("css.png");
-  background-size: auto;
   cursor: pointer;
-  border: none;
 }
-#javascript-button {
-  width: 205px;
-  height: 190px;
-  background-image: image-url("javascript.png");
-  background-size: auto;
-  cursor: pointer;
-  border: none;
+#ror-btn {
+  background: image-url("ror.png") no-repeat left;
+  background-size: contain;
 }
-#text-button {
-  display: block;
-  cursor: pointer;
-  width: 160px;
-  text-align: center;
-  border: 1px solid #232323;
+#css-btn {
+  background: image-url("css.png") no-repeat left;
+  background-size: contain;
+}
+#jav-btn {
+  background: image-url("javascript.png") no-repeat left;
+  background-size: contain;
 }
