@@ -7,19 +7,7 @@
 - content_for :javascript_includes do
   = javascript_include_tag 'home.js'
 
-div.header
-  div.header-logo
-    | プログラミング学習サイト
-  div.header-list
-    ul
-      li
-        | Ruby On Rails
-      li
-        | css
-      li
-        | javascript
-      li
-        | お問い合わせ
+= render 'common/header'
 
 div.main
   div.copy-container
@@ -48,17 +36,4 @@ div.main
   div#jav-text.detail-area
     | JavaScriptとはWebアプリケーションのクライアントサイドで実行され、インタラクティブな表現を実現できるプログラム言語です。
 
-  div.contact-form
-  = render 'contact_form'
-
-div.footer
-  div.footer-logo
-    | プログラミング学習サイト
-  div.footer-list
-    ul
-      li
-        | サイト概要
-      li
-        | 問い合わせ
-      li
-        | FAQ
+= render 'common/footer'
