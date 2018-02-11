@@ -1,39 +1,49 @@
 // 画面ヘッダー部
 .header {
-  height: 90px;
+  height: 45px;
   color: #fff;
   background-color: #2f3127;
 }
 .header-logo {
-  font-size: 36px;
-  padding: 20px 40px;
+  font-size: 20px;
+  padding: 10px 20px;
   float: left; //左寄せ
 }
-.header-list {
-  float: left; //左寄せにしてリストを横に並べる
+.nav-item {
+  font-size:15px;
+  float: right; //左寄せにしてリストを横に並べる
 }
-.header-list ul {
+.nav-item ul {
   margin: 0; //liの位置がズレるのでなくす
 }
-.header-list li {
+.nav-item li {
   list-style: none; //リストの「・」を消す
   float: left; //左寄せにしてリストを横に並べる
-  padding: 33px 20px; //上下30、左右20の余白
+  padding: 15px 20px; //上下30、左右20の余白
 }
 
 .footer {
-  height: 120px;
+  height: 100px;
   padding: 40px;
   background-color: #2f3127;
   color: #fff;
+  position: relative;
 }
-.footer-logo {
-  font-size: 32px;
-  float: left;
+.footer-support {
+  padding-left: 20px;
 }
-.footer-list {
-  float: right;
+dl.footer-support {
+  width:500px;
 }
-.footer-list li {
-  padding-bottom: 20px;
+.footer-support dt {
+  float:left;
+}
+dd.footer-col {
+  margin-left:80px;
+}
+.footer-copyright {
+  font-size: 11px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
