@@ -4,8 +4,12 @@ html
     meta charset="utf-8"
     = stylesheet_link_tag 'application', media: 'all'
     = stylesheet_link_tag "common", media: 'all'
+    = javascript_include_tag 'application', media: 'all'
+    / = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', media: 'all'
     = yield :javascript_includes
     title = "#{yield :title} | プログラミング学習"
 
   body
+    = render 'common/header'
     = yield
+    = render 'common/footer'
