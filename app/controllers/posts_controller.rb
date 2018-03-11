@@ -19,11 +19,29 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         format.html {redirect_to @post, notice: '登録処理が正常に終了しました'}
-        # format.json {render :show, status: :created, location: @post}
       else
         format.html {render :new}
-        # format.json {render json: @book.errors, status: unprocessable_entity}
       end
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @post.update(post_params)
+        format.html {redirect_to @post, notice: '更新処理が正常に終了しました'}
+      else
+        format.html {render :edit}
+      end
+    end
+  end
+
+  def destroy
+    @post.destroy
+    respond_to do |format|
+      format.html {redirect_to @post, notice: '削除処理が正常に終了しました'}
     end
   end
 
@@ -33,6 +51,6 @@ private
   end
 
   def post_params
-    params.require(:post).permit(:content)
+    params.require(:post).permit(:content, :title)
   end
 end
