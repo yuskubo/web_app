@@ -1,0 +1,9 @@
+- provide(:title, '投稿編集')
+
+- content_for :stylesheet_links do
+  = stylesheet_link_tag "posts"
+
+h1
+  | 投稿内容の編集
+= render 'form', post: @post
+= link_to '戻る', posts_path
