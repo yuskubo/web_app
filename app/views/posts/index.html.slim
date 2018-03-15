@@ -7,7 +7,7 @@ p#notice
   = notice
 
 h1
-  | 投稿内容
+  | 投稿内容一覧
 table
   thead
     tr
@@ -38,4 +38,7 @@ table
           = link_to '編集', edit_post_path(post)
         td
           = link_to '削除', post, method: :delete, data: {confirm: '削除してよろしいですか。'}
-= link_to '新規登録', new_post_path
+  caption.create-link
+    = link_to '新規登録', new_post_path
+div.back-link-area
+  = link_to 'ＴＯＰへ戻る', '/'

@@ -6,4 +6,5 @@
 h1
   | 新規投稿
 = render 'form', post: @post
-= link_to '戻る', posts_path
+div.back-link-area
+  = link_to '投稿内容一覧へ戻る', posts_path

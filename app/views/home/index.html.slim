@@ -2,6 +2,7 @@
 
 - content_for :stylesheet_links do
   = stylesheet_link_tag "home"
+  = stylesheet_link_tag "modal"
 
 - content_for :javascript_includes do
   = javascript_include_tag 'home'
@@ -19,7 +20,7 @@ div.main
     h3.section-title
       | 学習項目
     div
-      | 以下の画像をクリックをすると説明を見ることができます。
+      | 画像をクリックをするとそれぞれの説明を見ることができます。
     div.contents-item
       button#ror-btn.btn-icon onclick="ror_btn()"
     div.contents-item
@@ -33,16 +34,13 @@ div.main
   div#jav-text.detail-area
     | JavaScriptとはWebアプリケーションのクライアントサイドで実行され、インタラクティブな表現を実現できるプログラム言語です。
 
+  div.contents
+    h3.section-title
+      | ＣＲＵＤのサンプルはこちら
+    div.aaa
+      = link_to posts_index_path, class: 'crud-link' do
+        = image_tag 'crud.png'
 
-  p
-    a.modalOpen href="#modal01"  Open
-  /! モーダルウィンドウ
-  #modal01.modal
-    /! モーダルウィンドウが開いている時のオーバーレイ
-    .overLay.modalClose
-    /! モーダルウィンドウの中身
-    .inner
-      | モーダルウィンドウ
-      a.modalClose href=""  Close
-  p
-   | Hello World!
+
+
+  = render 'home/site_detail_modal'
