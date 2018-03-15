@@ -19,11 +19,11 @@
 .nav-item li {
   list-style: none; //リストの「・」を消す
   float: left; //左寄せにしてリストを横に並べる
-  padding: 15px 20px; //上下30、左右20の余白
+  padding: 15px 20px; //上下15、左右20の余白
 }
-
 .footer {
   height: 100px;
+  width: 100%;
   padding: 40px;
   background-color: #2f3127;
   color: #fff;
@@ -46,4 +46,7 @@ dd.footer-col {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+.back-link-area {
+  margin: 0px 0px 40px 30px;
 }
