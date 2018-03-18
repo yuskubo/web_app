@@ -3,8 +3,10 @@
 - content_for :stylesheet_links do
   = stylesheet_link_tag "posts"
 
-h1
-  | 新規投稿
-= render 'form', post: @post
-div.back-link-area
-  = link_to '投稿内容一覧へ戻る', posts_path
+div.main
+  div.page-title
+    h1
+      | 新規投稿
+    = render 'form', post: @post
+  div.back-link-area
+    = link_to '投稿内容一覧へ戻る', posts_path
