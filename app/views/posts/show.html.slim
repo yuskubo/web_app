@@ -6,32 +6,34 @@
 p#notice
   = notice
 
-h1
-  | 投稿内容詳細
-table
-  thead
-    tr
-      th
-        | id
-      th
-        | タイトル
-      th
-        | 内容
-      th
-        | 作成日
-      th
-        | 更新日
-  tbody
-    tr
-      td
-        = @post.id
-      td
-        = @post.title
-      td
-        = @post.content
-      td
-        = @post.created_at
-      td
-        = @post.updated_at
-div.back-link-area
-  = link_to '投稿内容一覧へ戻る', posts_path
+div.main
+  div.page-title
+    h1
+      | 投稿内容詳細
+    table
+      thead
+        tr
+          th
+            | id
+          th
+            | タイトル
+          th
+            | 内容
+          th
+            | 作成日
+          th
+            | 更新日
+      tbody
+        tr
+          td
+            = @post.id
+          td
+            = @post.title
+          td
+            = @post.content
+          td
+            = @post.created_at
+          td
+            = @post.updated_at
+    div.back-link-area
+      = link_to '投稿内容一覧へ戻る', posts_path
