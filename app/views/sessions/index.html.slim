@@ -1,0 +1,12 @@
+h1 簡易ログイン画面
+
+= form_tag(url: sessions_index_path) do
+  = text_field_tag(:name)
+  = label_tag('パスワード')
+  = text_field_tag(:password)
+  = submit_tag('ログイン')
+
+end
+
+p#notice
+  = notice

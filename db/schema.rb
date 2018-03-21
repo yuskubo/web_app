@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180311100403) do
+ActiveRecord::Schema.define(version: 20180321102048) do
 
   create_table "authors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
@@ -37,6 +37,13 @@ ActiveRecord::Schema.define(version: 20180311100403) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "users_BK", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "username"
     t.string   "password_digest"
     t.string   "email"
@@ -47,5 +54,5 @@ ActiveRecord::Schema.define(version: 20180311100403) do
     t.datetime "updated_at",      null: false
   end
 
-  add_foreign_key "authors", "users"
+  add_foreign_key "authors", "users_BK", column: "user_id"
 end
