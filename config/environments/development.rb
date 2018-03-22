@@ -59,7 +59,7 @@ Rails.application.configure do
          db: 0,
          namespace: 'sessions'
      },
-    expire_after: 1.minutes,
+    expire_after: 60.minutes,
     key: "_#{Rails.application.class.parent_name.downcase}_session"
  }
 end
