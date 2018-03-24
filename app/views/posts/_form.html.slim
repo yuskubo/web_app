@@ -10,11 +10,11 @@
             = message
 
   div.input-field
-    = f.label('タイトル', :class=>'field-label')
-    = f.text_area(:title, :class=>'title')
-    br
-    = f.label('投稿内容', :class=>'field-label')
-    = f.text_area(:content, :class=>'content')
-    br
+    div
+      = f.label('タイトル', :class=>'field-label')
+      = f.text_area(:title, :class=>'title')
+    div
+      = f.label('投稿内容', :class=>'field-label')
+      = f.text_area(:content, :class=>'content')
     div.btn-field
       = f.submit('投 稿', :class=>'post-btn')

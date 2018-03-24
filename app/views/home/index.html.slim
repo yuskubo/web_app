@@ -6,6 +6,7 @@
 
 - content_for :javascript_includes do
   = javascript_include_tag 'home'
+  = javascript_include_tag 'modal'
 
 div.main
   div.homepage-title
@@ -15,7 +16,9 @@ div.main
         | .
     h2
       | プログラミング
-
+  h2
+    div.modal-area
+      = render partial:'home/site_detail_modal'
   div.contents
     h3.section-title
       | 学習項目
@@ -37,10 +40,6 @@ div.main
   div.contents
     h3.section-title
       | ＣＲＵＤのサンプルはこちら
-    div.aaa
+    div
       = link_to posts_index_path, class: 'crud-link' do
         = image_tag 'crud.png'
-
-
-
-  = render 'home/site_detail_modal'

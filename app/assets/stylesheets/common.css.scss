@@ -9,8 +9,9 @@
   float: left; //左寄せ
 }
 .nav-item {
-  font-size:15px;
+  font-size: 15px;
   float: right; //左寄せにしてリストを横に並べる
+  padding: 10px 20px;
 }
 .nav-item ul {
   margin: 0; //liの位置がズレるのでなくす
@@ -18,7 +19,11 @@
 .nav-item li {
   list-style: none; //リストの「・」を消す
   float: left; //左寄せにしてリストを横に並べる
-  padding: 15px 20px; //上下15、左右20の余白
+}
+.nav-item li > a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
 }
 .main {
   padding: 10px 80px;
