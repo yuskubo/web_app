@@ -3,11 +3,13 @@ div.header
     | プログラミング学習サイト
   div.nav-item
     ul
+      / li
+      /   | Ruby On Rails
+      / li
+      /   | css
+      / li
+      /   | javascript
+      / li
+      /   | お問い合わせ
       li
-        | Ruby On Rails
-      li
-        | css
-      li
-        | javascript
-      li
-        | お問い合わせ
+        = link_to 'ログアウト', users_sign_out_path

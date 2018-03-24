@@ -1,14 +1,23 @@
-h1 簡易ログイン画面
+- provide(:title, 'ログイン')
 
+div.main
+  div.page-title
+    h1
+      | ログイン
 
-= form_tag(url: sessions_index_path) do
-  = text_field_tag(:name)
-  = label_tag('パスワード')
-  = text_field_tag(:password)
-  = hidden_field_tag(:referer, flash[:referer])
-  = submit_tag('ログイン')
-
-end
+div.input-field
+  = form_tag(users_index_path) do
+    div
+      = label_tag('ユーザ名')
+    div
+      = text_field_tag(:name)
+    div
+      = label_tag('パスワード')
+      = text_field_tag(:password)
+      = hidden_field_tag(:referer, flash[:referer])
+      br
+      = submit_tag('ログイン')
+  end
 
 p#notice
   = notice

@@ -1,0 +1,21 @@
+- provide(:title, 'ログイン')
+
+div.main.page-login
+  div.wrap
+    h1 ログイン
+    div.login-form
+      = form_tag(users_sign_in_path) do
+        div.field-name.name
+          = label_tag('ユーザ名')
+        div.input-field
+          = text_field_tag(:user_name, '', class:'input-text')
+        div.field-name.password
+          = label_tag('パスワード')
+        div.input-field
+          = password_field_tag(:password, '', class:'input-text')
+          = hidden_field_tag(:referer, flash[:referer])
+        div.msg-field
+          = @error
+        div.btn
+          = submit_tag('ログイン', class:'login-btn')
+      end
