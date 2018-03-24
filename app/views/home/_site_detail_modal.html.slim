@@ -1,11 +1,20 @@
-body
-  p
-    a.modalOpen href="#modal01"  Open
-  /! モーダルウィンドウ
-  #modal01.modal
-    /! モーダルウィンドウが開いている時のオーバーレイ
-    .overLay.modalClose
-    /! モーダルウィンドウの中身
-    .inner
-      | モーダルウィンドウ
-      a.modalClose href=""  Close
+p
+  a.modal-open href="#modal-detail"  「プログラミング」とは？
+/! モーダルウィンドウ
+#modal-detail.modal
+  /! モーダルウィンドウが開いている時のオーバーレイ
+  div.overLay.modal-close
+  /! モーダルウィンドウの中身
+  div.inner
+    | コンピュータは人間のように思考することができないため、
+    br
+    | 何かを処理するには必ず命令の記述が必要となる。
+    br
+    | その命令（処理）を記述したものをプログラムと言う。
+    br
+    | また、プログラムを作ることをプログラミングと言い、プログラミングには
+    br
+    | プログラミング用の専用言語が用いられる。
+    div.btn-area
+      a.modal-close href=""
+        | 閉じる

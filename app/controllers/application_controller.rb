@@ -6,15 +6,15 @@ class ApplicationController < ActionController::Base
     def check_logined
       if session[:user_name] then
         begin
-          @user = User.find_by(name: session[:user_name])
+          @user = User.find_by(user_name: session[:user_name])
         rescue ActiveRecord::RecordNotFound
           reset_session
         end
       end
 
     unless @user
-      # flash[:referer] = request.fullpath
-      redirect_to controller: :sessions, action: :index
+      flash[:referer] = request.fullpath
+      redirect_to users_sign_in_path and return
     end
     end
 end
