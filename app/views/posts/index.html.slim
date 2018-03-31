@@ -14,8 +14,6 @@ div.main
       thead
         tr
           th
-            | id
-          th
             | タイトル
           th
             | 作成日
@@ -26,8 +24,6 @@ div.main
       tbody
         - @posts.each do |post|
           tr
-            td
-              = post.id
             td
               = post.title
             td
