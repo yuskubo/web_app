@@ -3,9 +3,6 @@
 - content_for :stylesheet_links do
   = stylesheet_link_tag "posts"
 
-p#notice
-  = notice
-
 div.main
   div.page-title
     h1
@@ -31,5 +28,7 @@ div.main
             = @post.created_at
           td
             = @post.updated_at
+    p#notice
+      = notice
     div.back-link-area
       = link_to '投稿内容一覧へ戻る', posts_path
