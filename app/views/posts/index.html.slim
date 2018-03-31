@@ -3,9 +3,6 @@
 - content_for :stylesheet_links do
   = stylesheet_link_tag "posts"
 
-p#notice
-  = notice
-
 div.main
   div.page-title
     h1
@@ -13,8 +10,6 @@ div.main
     table
       thead
         tr
-          th
-            | id
           th
             | タイトル
           th
@@ -26,8 +21,6 @@ div.main
       tbody
         - @posts.each do |post|
           tr
-            td
-              = post.id
             td
               = post.title
             td
@@ -42,5 +35,7 @@ div.main
               = link_to '削除', post, method: :delete, data: {confirm: '削除してよろしいですか。'}
       caption.create-link
         = link_to '新規登録', new_post_path
+  p#notice
+    = notice
   div.back-link-area
     = link_to 'ＴＯＰへ戻る', '/'

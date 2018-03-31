@@ -33,7 +33,6 @@
 }
 .footer {
   height: 100px;
-  width: 100%;
   padding: 40px;
   background-color: #2f3127;
   color: #fff;
@@ -43,13 +42,13 @@
   padding-left: 20px;
 }
 dl.footer-support {
-  width:500px;
+  width: 500px;
 }
 .footer-support dt {
-  float:left;
+  float: left;
 }
 dd.footer-col {
-  margin-left:80px;
+  margin-left: 80px;
 }
 .footer-copyright {
   font-size: 11px;
@@ -60,4 +59,7 @@ dd.footer-col {
 .back-link-area {
   margin: 0px 0px 40px 0px;
   cursor: pointer;
+}
+#notice {
+  color: blue;
 }

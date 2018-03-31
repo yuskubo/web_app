@@ -29,12 +29,4 @@ function change_display(btn) {
   } else if(btn == "jav-btn") {
     jav_detail.style.display = "block";
   }
-
 }
-
-
-
-
-$(document).ready(function() {
- $("p").css("color", "blue");
-});
