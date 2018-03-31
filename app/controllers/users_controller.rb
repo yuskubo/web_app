@@ -18,7 +18,6 @@ class UsersController < ApplicationController
     end
   end
   def sign_out
-    # session[:user_name] = nil
     reset_session
     redirect_to home_index_path
   end
