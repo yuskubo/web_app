@@ -6,7 +6,7 @@ div.main
       | ログイン
 
 div.input-field
-  = form_tag(users_index_path) do
+  = form_tag(users_index_path, method: :post) do
     div
       = label_tag('ユーザ名')
     div
