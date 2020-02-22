@@ -1,6 +1,7 @@
-# README
-
+## About
 This is a Repository of learning Ruby on Rails.
+
+## Environments
 
 * Ruby version : ruby 2.4.0p0
 
